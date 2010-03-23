@@ -1,0 +1,24 @@
+= Rspec-Rails23
+
+Rails support for Rails 2.3.5
+
+== DESCRIPTION:
+
+
+== REQUIREMENTS:
+
+* Ruby 1.8.6+
+* Rails 2.3.5
+* Rspec2
+
+== ISSUES
+
+* No support for pure Rails fixtures at all, and no plans to add it - we use Factory Girl/Fixture Replacement instead, so send a patch if you want support for this).
+* No support for Rails integration tests -- use Cucumber (http://github.com/aslakhellesoy/cucumber) instead!
+* No support for < 2.3.5 - it may work, it may not.  Not tested.
+
+== CREDITS:
+
+* RSpec for the great ideas and matchers
+* Chad Humphries for Micronaut
+* David Chelimsky and the Rspec-core team for Rspec

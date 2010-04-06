@@ -1,19 +1,20 @@
 = Rspec-Rails23
 
-Rails support for Rails 2.3.5
+Rspec 2 (prerelease) support for Rails 2.3.5.  
+
+This is being released based on production development and use at Relevance (http://thinkrelevance.com), based on an extraction from micronaut-rails that was developed for Rails 2.3.x  As such, and based on Rails 2.3 days being numbered, it will most likely never have much of the features of the legacy rspec-rails (such as fixtures, integration tests, etc).
 
 == DESCRIPTION:
-
 
 == REQUIREMENTS:
 
 * Ruby 1.8.6+
 * Rails 2.3.5
-* Rspec2
+* Rspec 2 (get it with "gem install rspec --prerelease")
 
 == ISSUES
 
-* No support for pure Rails fixtures at all, and no plans to add it - we use Factory Girl/Fixture Replacement instead, so send a patch if you want support for this).
+* No support for pure Rails fixtures at all, and no plans to add it - we use Factory Girl/Fixture Replacement instead.
 * No support for Rails integration tests -- use Cucumber (http://github.com/aslakhellesoy/cucumber) instead!
 * No support for < 2.3.5 - it may work, it may not.  Not tested.
 

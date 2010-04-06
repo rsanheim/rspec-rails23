@@ -9,7 +9,7 @@ begin
     s.authors = ["Chad Humphries & Rob Sanheim"] 
     s.files =  FileList["[A-Z]*", "{bin,lib,spec}/**/*"] 
     s.add_dependency "actionpack", '~> 2.3.0'
-    s.add_dependency "rspec2", '>= 2.0.0.a1'
+    s.add_dependency "rspec", '>= 2.0.0.a1'
   end 
   Jeweler::GemcutterTasks.new
 rescue LoadError 

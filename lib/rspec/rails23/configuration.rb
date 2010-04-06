@@ -23,7 +23,7 @@ module Rspec
       end
       
       def enable_rails_specific_mocking_extensions(filter_options={})
-        case Rspec.configuration.mock_framework.to_s
+        case Rspec.configuration.options[:mock_framework].to_s
         when /mocha/i
           require 'rspec/rails23/mocking/with_mocha'
           Rspec.configuration.include(::Rspec::Rails23::Mocking::WithMocha, filter_options)

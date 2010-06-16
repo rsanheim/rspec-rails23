@@ -1,0 +1,5 @@
+0.0.3 - include patch to partial rendering to avoid nil errors (Jess Martin/Jon Distad)
+
+0.0.2 - hard lock to rspec 2.0.0.beta.8 - newer versions break things (Aaron Bedra)
+
+0.0.1 - initial release

@@ -37,9 +37,11 @@ module Rspec
         def record_render(opts)
           @_rendered ||= {}
           (@_rendered[:template] ||= opts[:file]) if opts[:file]
-          (@_rendered[:partials][opts[:partial]] += 1) if opts[:partial]
+          if opts[:partial]
+            @_rendered[:partials][opts[:partial]] ||= 0
+            @_rendered[:partials][opts[:partial]] += 1
+          end
         end
-
       end
 
 

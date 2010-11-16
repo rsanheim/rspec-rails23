@@ -7,6 +7,7 @@ require 'action_controller'
 
 gem "rspec-core", "~> 2.0.0.beta"
 require 'rspec/core'
+require 'rspec/core/formatters/base_text_formatter'
 require 'rspec-rails23'
 
 gem "mocha"
@@ -29,7 +30,7 @@ def remove_last_describe_from_world
   Rspec::Core.world.example_groups.pop
 end
 
-class DummyFormatter < Rspec::Core::Formatters::BaseTextFormatter; end
+class DummyFormatter < RSpec::Core::Formatters::BaseTextFormatter; end
 
 def dummy_reporter
   DummyFormatter.new({}, StringIO.new)
@@ -39,7 +40,7 @@ def use_color?
   !ENV.has_key?('TM_MODE')
 end
 
-Rspec.configure do |config|
+RSpec.configure do |config|
   config.mock_with :mocha
   config.color_enabled = use_color?
   config.formatter = :documentation

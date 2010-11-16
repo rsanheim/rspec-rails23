@@ -1,0 +1,44 @@
+PATH
+  remote: .
+  specs:
+    rspec-rails23 (0.1.0)
+      actionpack (~> 2.3.0)
+      rspec (~> 2.0.0)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    actionpack (2.3.10)
+      activesupport (= 2.3.10)
+      rack (~> 1.1.0)
+    activesupport (2.3.10)
+    diff-lcs (1.1.2)
+    git (1.2.5)
+    jeweler (1.5.1)
+      bundler (~> 1.0.0)
+      git (>= 1.2.5)
+      rake
+    mocha (0.9.9)
+      rake
+    rack (1.1.0)
+    rake (0.8.7)
+    rspec (2.0.1)
+      rspec-core (~> 2.0.1)
+      rspec-expectations (~> 2.0.1)
+      rspec-mocks (~> 2.0.1)
+    rspec-core (2.0.1)
+    rspec-expectations (2.0.1)
+      diff-lcs (>= 1.1.2)
+    rspec-mocks (2.0.1)
+      rspec-core (~> 2.0.1)
+      rspec-expectations (~> 2.0.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  actionpack (~> 2.3.0)
+  jeweler (~> 1.5.1)
+  mocha (= 0.9.9)
+  rspec (~> 2.0.0)
+  rspec-rails23!

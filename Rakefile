@@ -19,13 +19,13 @@ end
 require 'rspec/core/rake_task'
 
 desc "Run all specs"
-Rspec::Core::RakeTask.new :spec do |t|
+RSpec::Core::RakeTask.new :spec do |t|
   t.pattern = "spec/**/*_spec.rb"
 end
 
 namespace :spec do
   desc "Run all specs using rcov"
-  Rspec::Core::RakeTask.new :coverage do |t|
+  RSpec::Core::RakeTask.new :coverage do |t|
     t.pattern = "spec/**/*_spec.rb"
     t.rcov = true
     t.rcov_opts = %[--exclude "spec/*,gems/*,db/*,/Library/Ruby/*,config/*" --text-summary  --sort coverage]

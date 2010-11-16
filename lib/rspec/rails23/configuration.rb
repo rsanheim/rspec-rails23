@@ -9,27 +9,27 @@ module Rspec
       
       # :behaviour => { :describes => lambda { |dt| dt < ActiveRecord::Base }
       def enable_active_record_transactional_support(filter_options={})
-        Rspec.configuration.extend(::Rspec::Rails23::TransactionalDatabaseSupport, filter_options)
+        RSpec.configuration.extend(::Rspec::Rails23::TransactionalDatabaseSupport, filter_options)
       end
       
       # :behaviour => { :describes => lambda { |dt| dt.to_s.ends_with?('Helper') }
       def enable_helper_support(filter_options={})
-        Rspec.configuration.extend(::Rspec::Rails23::Helpers, filter_options)
+        RSpec.configuration.extend(::Rspec::Rails23::Helpers, filter_options)
       end
       
       # :behaviour => { :describes => lambda { |dt| dt < ActionController::Base } 
       def enable_controller_support(filter_options={})
-        Rspec.configuration.extend(::Rspec::Rails23::Controllers, filter_options)
+        RSpec.configuration.extend(::Rspec::Rails23::Controllers, filter_options)
       end
       
       def enable_rails_specific_mocking_extensions(filter_options={})
-        case Rspec.configuration.options[:mock_framework].to_s
+        case RSpec.configuration.mock_framework.to_s
         when /mocha/i
           require 'rspec/rails23/mocking/with_mocha'
-          Rspec.configuration.include(::Rspec::Rails23::Mocking::WithMocha, filter_options)
+          RSpec.configuration.include(::Rspec::Rails23::Mocking::WithMocha, filter_options)
          when /rr/i
           require 'rspec/rails23/mocking/with_rr'
-          Rspec.configuration.include(::Rspec::Rails23::Mocking::WithRR, filter_options)
+          RSpec.configuration.include(::Rspec::Rails23::Mocking::WithRR, filter_options)
         end
       end
       
@@ -45,4 +45,4 @@ module Rspec
   end
 end
 
-::Rspec::Core::Configuration.send(:include, ::Rspec::Rails23::Configuration)
+::RSpec::Core::Configuration.send(:include, ::Rspec::Rails23::Configuration)

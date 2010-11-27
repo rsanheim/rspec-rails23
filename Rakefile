@@ -32,7 +32,7 @@ namespace :spec do
   end
 end
 
-task :default => [:check_dependencies, :spec]
+task :default => [:spec]
 
 begin
   %w{sdoc sdoc-helpers rdiscount}.each { |name| gem name }
